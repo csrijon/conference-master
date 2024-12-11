@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .form-container {
+            max-width: 800px;
+            margin: auto;
+        }
+        .form-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #notifications-list, #seminars-list {
+            margin-top: 20px;
+        }
+        .seminar-card {
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Admin Panel</h1>
+        <!-- Notification Form -->
+        <form id="notification-form">
+            <h3>Push Notification</h3>
+            <div class="form-group">
+                <label for="notification">Notification Message</label>
+                <textarea class="form-control" id="notification" rows="3"></textarea>
+            </div>
+            <button type="button" id="push-notification" class="btn btn-primary">Push Notification</button>
+        </form>
+        <hr>
+        <!-- Seminar Form -->
+        <form id="seminar-form" enctype="multipart/form-data">
+            <h3>Add New Seminar</h3>
+            <div class="form-group">
+                <label for="title">Seminar Title</label>
+                <input type="text" id="title" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="description">About</label>
+                <textarea id="description" class="form-control" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="image">Seminar Image</label>
+                <input type="file" id="image" class="form-control">
+            </div>
+            <button type="button" id="add-seminar" class="btn btn-success">Add Seminar</button>
+        </form>
+        <!-- Display Sections -->
+        <div id="notifications-list">
+            <h3>Notifications</h3>
+            <ul></ul>
+        </div>
+        <div id="seminars-list">
+            <h3>Seminars</h3>
+            <div></div>
+        </div>
+    </div>
+    <script src="/assets/js/side.js"></script>
+</body>
+</html>
